@@ -1,11 +1,16 @@
 import { useState } from "react";
 import "./App.css";
-import { Loader } from "./components";
+import { OfficeScene, Preloader } from "./components";
 
 function App() {
+  const [isLoaded, setisLoaded] = useState(false);
+
   return (
     <>
-      <Loader />
+      <div className="w-screen h-screen">
+        {isLoaded ? null : <Preloader />}
+        <OfficeScene isLoaded={isLoaded} setisLoaded={setisLoaded} />
+      </div>
     </>
   );
 }

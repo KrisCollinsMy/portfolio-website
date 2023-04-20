@@ -1,3 +1,5 @@
-import Loader from "./Loader";
+import Preloader from "./Preloader";
+import Loader from "./threejs/Loader";
+import OfficeScene from "./threejs/OfficeScene";
 
-export { Loader };
+export { Preloader, Loader, OfficeScene };
