@@ -120,36 +120,41 @@ const AnimatedMesh = ({ isLoaded, setisLoaded }) => {
     animate(state.clock.elapsedTime);
 
     if (isLoaded) {
-        // state.camera.lookAt(-600.54, 120.87, -80.84);
-        // //state.camera.lookAt(-261.54, 108.87, 380.84);
-        // //state.camera.position.lerp(vec.set(-300.12, 150.87, 490.64), 0.009);
-        // state.camera.position.lerp(vec.set(-150.12, 155.87, 570.64), 0.02);
-        // state.camera.updateProjectionMatrix();
-        // x: -160.12,
-        //   y: 150.87,
-        //   z: 580.64,
-        gsap.to(state.camera.position, {
-          duration: 6,
-          ease: "power3",
-          x: -160.12,
-          y: 150.87,
-          z: 580.64,
-          onComplete: function () {
-            setisLoaded(false);
-          }
-        });
+      // state.camera.lookAt(-600.54, 120.87, -80.84);
+      // //state.camera.lookAt(-261.54, 108.87, 380.84);
+      // //state.camera.position.lerp(vec.set(-300.12, 150.87, 490.64), 0.009);
+      // state.camera.position.lerp(vec.set(-150.12, 155.87, 570.64), 0.02);
+      // state.camera.updateProjectionMatrix();
+      // x: -160.12,
+      //   y: 150.87,
+      //   z: 580.64,
+      gsap.to(state.camera.position, {
+        duration: 7,
+        ease: "power3",
+        x: -160.12,
+        y: 150.87,
+        z: 580.64,
+        onComplete: function () {
+          console.log("scene is done loading");
+         
+        },
+      });
 
-        state.camera.lookAt(-271.54, 150.87, 380.84);
-      }
+      state.camera.lookAt(-271.54, 150.87, 380.84);
+    }
   });
 
   return (
     <group position={[-0.8, -1.1, 1.3]}>
       <mesh ref={cubeRef} geometry={box} material={wireframe_mesh_material} />
-      <mesh ref={icosahedronRef} geometry={icosahedron} material={wireframe_mesh_material} />
+      <mesh
+        ref={icosahedronRef}
+        geometry={icosahedron}
+        material={wireframe_mesh_material}
+      />
     </group>
   );
-}
+};
 
 const OfficeScene = ({ isLoaded, setisLoaded }) => {
   const group = useRef();
@@ -168,7 +173,7 @@ const OfficeScene = ({ isLoaded, setisLoaded }) => {
     <Canvas
       flat
       camera={{
-        position: [-200, 400, 1000],
+        position: [-200, 200, 1100],
         fov: 45,
         near: 0.1,
         far: 2000,
@@ -192,7 +197,7 @@ const OfficeScene = ({ isLoaded, setisLoaded }) => {
                 rotation={[-Math.PI / 2, 0, -Math.PI]}
                 scale={100}
               >
-                <AnimatedMesh isLoaded={isLoaded}/>
+                <AnimatedMesh isLoaded={isLoaded} />
                 <mesh
                   geometry={nodes.Chair1_FabricGrey_0.geometry}
                   material={solid_material}
