@@ -18,7 +18,7 @@ const HeroText = () => {
         onInit={(typewriter) => {
           typewriter
             .typeString(
-              "Hi, I’m Kris Collins. I am a graphic designer, <br> UI/UX designer & junior front-end developer. <br> <button style='font-weight:bold; text-decoration:underline; font-size:1.4rem;'>View my work</button>"
+              "Hi, I’m Kris Collins. I am a graphic designer, <br> UI/UX designer & front-end developer. <br> <button style='font-weight:bold; text-decoration:underline; font-size:1.4rem;'>View my work</button>"
             )
             .start();
         }}
