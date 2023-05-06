@@ -1,6 +1,6 @@
 import { Html, useProgress } from "@react-three/drei";
 
-const Loader = () => {
+const Loader = ({setisLoaded}) => {
   const { progress } = useProgress();
 
   return (
@@ -14,7 +14,8 @@ const Loader = () => {
           marginTop: 40,
         }}
       >
-        {progress.toFixed(2)}%
+        {progress.toFixed(0)}%
+        {progress.toFixed(0) == '100' ? setisLoaded(true) : null}
       </p>
     </Html>
   );
