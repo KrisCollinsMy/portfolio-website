@@ -41,7 +41,7 @@ const CameraZoom = ({ isLoaded, setshowHtml, onClicked, setOnClicked }) => {
         y: 120.87,
         z: 450.84,
         onComplete: function () {
-          setOnClicked(false);
+          //setOnClicked(false);
         },
       });
     }
@@ -80,9 +80,9 @@ const OfficeScene = ({ isLoaded, setisLoaded, onClicked, setOnClicked }) => {
     >
       <Suspense fallback={<Loader setisLoaded={setisLoaded} />}>
         <OrbitControls
-          // enableZoom={false}
-          // enableRotate={false}
-          // enablePan={false}
+          enableZoom={false}
+          enableRotate={false}
+          enablePan={false}
           target={[-261.54, 114.87, 380.84]}
         />
         <group ref={group}>

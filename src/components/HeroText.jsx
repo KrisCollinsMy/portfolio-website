@@ -2,13 +2,13 @@ import Typewriter from "typewriter-effect";
 
 const HeroText = ({onClicked, setOnClicked}) => {
   
-  return (
-    
+  return (<>
+    {onClicked ? null : (
     <div
-      className="z-50 text-xl fixed top-1/4 left-1/3 font-mono tracking-[2px] whitespace-nowrap text-center overflow-hidden"
+      className="z-50 absolute md:-translate-x-1/2 lg:-translate-x-1/2 -translate-y-1/2 m-auto sm:text-sm md:text-xl lg:text-xl top-1/4 sm:left-0 md:left-1/2 lg:left-1/2 font-mono tracking-[2px]  text-center overflow-hidden bg-black text-[#FFD580] font-bold p-1"
       id="hero-text"
     >
-      {onClicked ? '' : (
+      
       <Typewriter
         options={{
           autoStart: true,
@@ -28,8 +28,9 @@ const HeroText = ({onClicked, setOnClicked}) => {
             })
             .start();
         }}
-      />)}
-    </div>
+      />
+    </div>)}
+    </>
   );
 };
 
