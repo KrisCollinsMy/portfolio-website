@@ -5,6 +5,7 @@ import {
   useGLTF,
   Icosahedron,
   Html,
+  Stats
 } from "@react-three/drei";
 import Loader from "./Loader";
 import { useRef, useState, Suspense } from "react";
@@ -12,7 +13,6 @@ import * as THREE from "three";
 import { gsap } from "gsap";
 import Books from "./objects/Books";
 import Cup from "./objects/Cup";
-import IndoorPlant from "./objects/IndoorPlant";
 import Macbook from "./objects/Macbook";
 import Office from "./objects/Office";
 
@@ -66,11 +66,12 @@ const OfficeScene = ({ isLoaded, setisLoaded, onClicked, setOnClicked }) => {
   return (
     <Canvas
       flat
+      dpr={window.devicePixelRatio*0.8}
       camera={{
         position: [-200, 200, 1100],
         fov: 45,
         near: 0.1,
-        far: 2000,
+        far: 400,
       }}
       style={{
         position: "fixed",
@@ -92,13 +93,13 @@ const OfficeScene = ({ isLoaded, setisLoaded, onClicked, setOnClicked }) => {
             onClicked={onClicked}
             setOnClicked={setOnClicked}
           />
-          <IndoorPlant materials={materials} />
           <Cup materials={materials} />
           <Books materials={materials} />
           <Macbook materials={materials} showHtml={showHtml} />
           <Office materials={materials} />
         </group>
       </Suspense>
+      <Stats />
     </Canvas>
   );
 };

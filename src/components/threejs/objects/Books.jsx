@@ -6,7 +6,7 @@ const Books = ({ materials }) => {
   return (
     <group position={[-22, 0, 0]}>
       <group
-        position={[-340.54, 88.9, 398.84]}
+        position={[-320.54, 88.9, 398.84]}
         rotation={[-Math.PI / 2, 0, 0]}
         scale={12}
       >
