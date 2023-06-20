@@ -2,7 +2,10 @@ import { useGLTF } from "@react-three/drei";
 import { Html } from "@react-three/drei";
 
 const Macbook = ({ materials, showHtml }) => {
+  useGLTF.preload("./3d-models/macbook/mac-draco.glb");
+
   const { nodes } = useGLTF("./3d-models/macbook/mac-draco.glb");
+
   return (
     <group position={[-261.54, 90.87, 380.84]} scale={8}>
       <group position={[0, -0.04, 0.41]} rotation={[0.01, 0, 0]}>
@@ -27,7 +30,7 @@ const Macbook = ({ materials, showHtml }) => {
             geometry={nodes.Cube008_2.geometry}
             material={materials.solid_material}
           >
-            {showHtml ? (
+            {showHtml && (
               <Html
                 className="content"
                 position={[0, 0.04, -0.09]}
@@ -52,7 +55,7 @@ const Macbook = ({ materials, showHtml }) => {
                   ></iframe>
                 </div>
               </Html>
-            ) : null}
+            )}
           </mesh>
         </group>
       </group>

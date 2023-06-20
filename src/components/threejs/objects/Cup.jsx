@@ -1,6 +1,8 @@
 import { useGLTF } from "@react-three/drei";
 
 const Cup = ({ materials }) => {
+  useGLTF.preload("./3d-models/cup/scene.gltf");
+
   const cup = useGLTF("./3d-models/cup/scene.gltf");
 
   return (

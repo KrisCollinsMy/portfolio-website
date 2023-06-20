@@ -1,6 +1,8 @@
 import { useGLTF } from "@react-three/drei";
 
 const Books = ({ materials }) => {
+  useGLTF.preload("./3d-models/books/scene.gltf");
+
   const { nodes } = useGLTF("./3d-models/books/scene.gltf");
 
   return (
