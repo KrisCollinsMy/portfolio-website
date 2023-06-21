@@ -1,6 +1,6 @@
 ## Personal Portfolio Website with Three.js
 
-This project showcases my personal portfolio website built with React, Three.js, and Cypress for E2E testing. [Live Demo](https://poke-dex-blond.vercel.app/)
+This project showcases my personal portfolio website built with React, Three.js, and Cypress for E2E testing. [Live Demo](https://portfolio-website-y7i3.vercel.app/)
 
 ## Screenshots
 
