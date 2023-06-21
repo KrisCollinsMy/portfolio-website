@@ -1,20 +1,12 @@
-## Pokedex
+## Personal Portfolio Website with Three.js
 
-A simple application used to search and view pokemon information, built with React, TailwindCSS, and Cypress for E2E testing. [Live Demo](https://poke-dex-blond.vercel.app/)
+This project showcases my personal portfolio website built with React, Three.js, and Cypress for E2E testing. [Live Demo](https://poke-dex-blond.vercel.app/)
 
 ## Screenshots
 
 #### Desktop
 
-![Desktop Pokemon Info](public/readme-media/desktop.gif)
-
-#### Mobile
-
-<div style="display:flex; flex-direction:row; justify-content:center;">
-<img align="left" src="public/readme-media/mobile-pokemon-info.gif" width="50%"/>
-<img align="right" src="public/readme-media/search-pokemon.gif" width="50%"/>
-</div>
-<br>
+![Desktop](public/img/desktop.gif)
 
 ## Installation and Setup Instructions
 
@@ -35,25 +27,6 @@ To Start Server:
 To Visit App:
 
 `localhost:5173/`
-
-## Features
-
-- Responsive
-- Search Pokemon by name
-- View 898 Pokemon information
-
-## Steps taken to increase performance
-
-- Lazy loading
-    - pokemon images to increase page load speed
-    - components with suspend
-- Dispose of three.js objects
-- Clean Up Event Listeners
-
-## To do
-
-- Test in several browsers
-- E2E testing
 
 ## License
 

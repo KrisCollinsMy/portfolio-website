@@ -91,7 +91,7 @@ const OfficeScene = ({ isLoaded, setisLoaded, onClicked, setOnClicked }) => {
             <Office materials={materials} />
           </group>
         </Suspense>
-        <Stats />
+        {/* <Stats /> */}
       </Canvas>
     </ErrorBoundary>
   );
